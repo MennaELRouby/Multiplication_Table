@@ -16,7 +16,16 @@
   <table class="table table-hover">
     <thead>
         <?php
-        $v =6; ?>
+        if ($_SERVER["REQUEST_METHOD"]==="POST")
+        {
+            $v = $_POST["num"];
+            echo $v, "<br>";
+        }
+        else
+        {
+        echo "Invalid request";
+        }
+        ?>
       <tr>
         <th><?php echo "Table of &nbsp;" .$v ?></th>
       </tr>
